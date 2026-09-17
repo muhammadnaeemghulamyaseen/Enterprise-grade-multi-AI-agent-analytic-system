@@ -237,7 +237,7 @@ n8n_webhook_default = st.secrets.get("N8N_WEBHOOK_URL", "") if hasattr(st, "secr
 n8n_url = st.text_input(
     "🔗 n8n Production Webhook URL Instance", 
     value=n8n_webhook_default,
-    placeholder="https://end-to-end-data-pipeline.app.n8n.cloud/webhook-test/streamlit-data-ingestion"
+    placeholder="https://.app.n8n.cloud"
 )
 
 # Execution trigger for n8n cloud data transmission
