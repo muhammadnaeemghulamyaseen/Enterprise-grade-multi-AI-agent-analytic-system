@@ -234,11 +234,11 @@ if "n8n_response_status" not in st.session_state:
 
 # Input field to safely hold n8n Webhook URL endpoint configurations
 n8n_webhook_default = st.secrets.get("N8N_WEBHOOK_URL", "") if hasattr(st, "secrets") else ""
-n8n_url = st.text_input("https://end-to-end-data-pipeline.app.n8n.cloud/webhook-test/streamlit-data-ingestion")
+n8n_url = ("https://end-to-end-data-pipeline.app.n8n.cloud/webhook-test/streamlit-data-ingestion")
 
 # Execution trigger for n8n cloud data transmission
 import requests
-send_to_n8n = st.button("🚀 Trigger Multi-AI Agents & Whatsapp Dispatch", type="secondary", use_container_width=True)
+send_to_n8n = st.button("Connect to N8N", type="secondary", use_container_width=True)
 
 if send_to_n8n:
     if not n8n_url:
