@@ -225,9 +225,6 @@ with st.expander("🔍 Explore Current Active Data Matrix Table", expanded=False
 # N8N AUTOMATION MULTI-AI AGENT PIPELINE INTEGRATION
 # ------------------------------------------------------------------
 st.divider()
-st.subheader("🤖 Autonomous n8n Multi-AI Agent Orchestration")
-st.caption("Send parsed datasets matrices directly to your n8n workflows cluster containing Agent 1, 2, and 3.")
-
 # Safe initialization for transmission responses states
 if "n8n_response_status" not in st.session_state:
     st.session_state.n8n_response_status = None
@@ -238,7 +235,7 @@ n8n_url = ("https://end-to-end-data-pipeline.app.n8n.cloud/webhook-test/streamli
 
 # Execution trigger for n8n cloud data transmission
 import requests
-send_to_n8n = st.button("Connect to N8N", type="secondary", use_container_width=True)
+send_to_n8n = st.button("Click to Connect with N8N", type="secondary", use_container_width=True)
 
 if send_to_n8n:
     if not n8n_url:
