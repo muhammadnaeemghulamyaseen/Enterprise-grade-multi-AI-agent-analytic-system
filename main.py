@@ -234,11 +234,7 @@ if "n8n_response_status" not in st.session_state:
 
 # Input field to safely hold n8n Webhook URL endpoint configurations
 n8n_webhook_default = st.secrets.get("N8N_WEBHOOK_URL", "") if hasattr(st, "secrets") else ""
-n8n_url = st.text_input(
-    "🔗 n8n Production Webhook URL Instance", 
-    value=n8n_webhook_default,
-    placeholder="https://.app.n8n.cloud"
-)
+n8n_url = st.text_input("https://end-to-end-data-pipeline.app.n8n.cloud/webhook-test/streamlit-data-ingestion")
 
 # Execution trigger for n8n cloud data transmission
 import requests
